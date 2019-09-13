@@ -1,0 +1,11 @@
+header {
+    display: flex;
+    background-color: #519872;
+    justify-content: center;
+}
+
+img {
+    margin-top: 20px;
+    height: 40px;
+    width: 40px;
+}

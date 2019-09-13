@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import 'react-router-dom';
 import './House.css'
 import axios from 'axios';
 
@@ -14,9 +15,9 @@ export default class House extends Component {
         }
     }
 
-    deleteHouse = (id) => {
+    deleteHouse = () => {
         console.log(this.props.id);
-        axios.delete(`/api/houses/${id}`)
+        axios.delete(`/api/houses/${this.props.id}`)
     }
 
     render() {
@@ -29,7 +30,7 @@ export default class House extends Component {
                     <h3>City: {this.state.city}</h3>
                     <h3>State: {this.state.state}</h3>
                     <h3>Zip: {this.state.zip}</h3>
-                    <button id='delete-btn' onClick={this.deleteHouse(this.props.id)}>Ⓧ</button>
+                    <button id='delete-btn' onClick={this.deleteHouse}>Ⓧ</button>
                 </section>
             </div>
         )

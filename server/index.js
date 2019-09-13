@@ -26,7 +26,7 @@ app.use(express.json());
 
 app.get('/api/houses', controller.listHouses);
 app.post('/api/houses', controller.addHouses);
-// app.delete('/api/houses/:id', controller.deleteHouse);
+app.delete('/api/houses/:id', controller.deleteHouse);
 
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`)

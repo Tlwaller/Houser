@@ -7,5 +7,11 @@ module.exports = {
         const {property_name, address, city, state, zip} = req.body;
         const house = await req.app.get('db').add_house([property_name, address, city, state, zip]);
         return res.status(200).send(house);
+    },
+    deleteHouse: async (req, res) => {
+        const {id} = req.params;
+        await req.app.get('db').delete_house([id]);
+        const houses = await req.app.get('db').get_houses();
+        return res.status(200).send(houses);
     }
 }
