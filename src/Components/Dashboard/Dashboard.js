@@ -29,7 +29,7 @@ export default class Dashboard extends Component {
         return(
             <div id='houses'>
                 <h3>Dashboard</h3>
-                <Link to='/wizard'><button>Add New Property</button></Link>
+                <Link to='/wizard/step1'><button>Add New Property</button></Link>
                 {housesMapped}
             </div>
         )
